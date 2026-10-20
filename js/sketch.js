@@ -15,7 +15,7 @@ function windowResized() {
 
 function draw() {
     clear();
-
+    
     xPos = xPos + ((mouseX - xPos) * easing);
     yPos = yPos + ((mouseY - yPos) * easing);
 

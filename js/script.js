@@ -14,7 +14,6 @@ function setup() {
     createP('Background Color').parent(optionsTitles);
     createP('Pen Width').parent(optionsTitles);
 
-
     var optionsValues = createDiv().parent(options).style('margin: 10px 40px: width: 30px');
     penColor = createColorPicker('ffffff').parent(optionsValues);
     bgColor = createColorPicker('#1e1e1e').parent(optionsValues).style('margin-top: 10px');
@@ -31,9 +30,9 @@ function setup() {
 function draw() {
     background(30);
 
-    clearButton.mousePressed(function () {
+    clearButton.mousePressed(function ()) {
         lines = []
-    });
+    };
 
     if (mouseIsPressed) {
         var line = new MyLine(penColor.value(), penWidth.value());
