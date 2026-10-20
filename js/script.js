@@ -1,8 +1,8 @@
-var lines = []
-var penColor
-var bgColor
-var penWidth
-var clearButton
+var lines = [];
+var penColor;
+var bgColor;
+var penWidth;
+var clearButton;
 
 function setup() {
     createCanvas(400, 450);
@@ -25,18 +25,18 @@ function setup() {
     pendWidth.selected('2')
 
     clearButton = createButton('Clear').parent(options).style('width: 100px');
+
+    clearButton.mousePressed(function() {
+        lines = [];
+    }
 }
 
 function draw() {
-    background(30);
-
-    clearButton.mousePressed(function ()) {
-        lines = []
-    };
+    background(bgColor.value());
 
     if (mouseIsPressed) {
-        var line = new MyLine(penColor.value(), penWidth.value());
-        lines.push(line);
+        var newLine = new MyLine(penColor.value(), penWidth.value());
+        lines.push(newLine);
     }
 
     for (var line of lines) {
