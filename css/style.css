@@ -277,3 +277,69 @@ footer img {
     /* padding: 1rem; */
     /* box-sizing: border-box; */
 }
+
+#rainbow-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Keep portfolio content above the animation */
+body > :not(#rainbow-background) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Drawing app at the end of the page */
+#drawing-section {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#drawing-section h2 {
+    text-align: center;
+}
+
+#drawing-app {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+#drawing-app canvas {
+    display: block;
+    position: static !important;
+    flex-shrink: 0;
+    border: 2px solid linen;
+}
+
+#drawing-app p {
+    margin: 0 0 0.75rem;
+}
+
+#drawing-app button,
+#drawing-app select,
+#drawing-app input {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #drawing-app {
+        gap: 1rem;
+    }
+
+    #drawing-app canvas {
+        max-width: 100%;
+        height: auto !important;
+    }
+}
